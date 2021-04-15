@@ -1,0 +1,268 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0 20px 0 20px; 
+    text-align: center;
+    color: #8B8B8B;
+    background-color: #FAFAFA;
+    font-weight: 300;
+    Line-height:21px;
+
+    
+ 
+}
+
+
+h1{
+    font-size: 28px;
+    margin: 40px 0 40px 0;
+    color: black;
+}
+
+h1::after{
+    content:"";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #407BFF;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h2,
+h3{
+    color:black;
+}
+
+.adventure{
+    background-color: #407BFF;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius:20px ;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom:10px ;
+    height: 40px;
+    max-width: 220px;
+}
+
+.relax{
+    background-color: #8B8B8B;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius:20px ;
+    width: 250px;
+    margin-left:auto;
+    margin-right: auto;
+    height: 40px;
+    max-width: 220px;
+}
+
+
+.services{
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #407BFF1F;
+    padding-right: 20px;
+}
+
+.services,
+ .cactus{
+    margin: 15px 0 15px 0;
+}
+
+.icon{
+    padding: 20px;
+}
+
+.text{
+    padding-top:15px;
+    Line-height:17px;
+}
+
+@media screen and (min-width:640px){
+
+    .header-foto img{
+        min-width:400px  ;
+    }
+
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 109px;
+    }
+
+    .header-foto{
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+
+    .adventure{
+        flex: 40%;
+        text-align: center;
+        padding: 10px 0;
+        margin-right:20px;
+        
+    }
+
+    .relax{
+        flex: 40%;
+        text-align: center;
+        padding: 10px 5px;
+        width: 220px;
+        
+    }
+
+    .header-icon{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .services-our-icon{
+        display: flex;
+        flex: 1 1 calc(100% / 3);
+		flex-wrap: nowrap;
+    }
+
+
+    
+    .services{
+        margin:20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding:0;
+    }
+
+    .text{
+        margin: 15px 15px;
+    }
+
+    .icon{
+        margin-top:40px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:1100px){
+
+    body{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1040px;
+        font-weight: 300;
+ 
+    }
+
+    h1::after{
+        content:"";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: #407BFF;
+        margin-top:20px;
+        margin-left: 0;
+        margin-right:0;
+    }
+
+    .header-foto img{
+        margin-left: 94px ;
+    }
+
+
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        margin-bottom: 60px;
+    }
+
+    .header-foto{
+        display: flex;
+        flex: 30%;
+        flex-wrap: wrap;
+        order:2;
+        margin-top: 60px;
+        margin-right: -100px;
+        justify-content: right;
+    }
+
+    .header{
+        display: flex;
+        flex: 40%;
+        flex-wrap: wrap;
+        order:1;
+        padding: 60px 0px 0 0;
+        text-align: left;
+        margin-left: -80px;
+
+    }
+
+    .header-text{
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    .header-icon{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .services-our{
+        display: flex;
+        flex-wrap: nowrap;        
+    }
+
+    .services-our-icon{
+       order:1;
+       width: 550px;
+    }
+    
+    .services-our-text{
+        order:2;
+        flex: 50%;
+        text-align: left;
+        margin-left: 60px;
+        max-width: 430px;
+        width: 430px;
+
+    }
+
+    .services{
+        height: 190px;
+        width: 170px;
+        margin: 10px;
+        font-size: 13px;
+    }
+
+    .text{
+        padding: 0;
+        text-align: center;
+    }
+
+    .services-place{
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: left;
+        margin-top: 80px;
+    }
+
+    .services-place-text {
+        display: block;
+        max-width: 430px;
+        margin-right: 60px;
+    }
+
+
+}
